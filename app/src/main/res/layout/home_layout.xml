@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/title_home"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bed_no_list_width"
+        android:background="@color/main_theme_color">
+        <TextView
+            android:id="@+id/tv_main_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/actionbar_main_menu"
+            style="@style/ActionBarTitle"/>
+
+        <Button
+            android:id="@+id/tv_main_setting"
+            android:layout_width="@dimen/home_title_button"
+            android:layout_height="@dimen/home_title_button"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:background="@drawable/ic_setting"
+            style="@style/ActionBarButton"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/home_circlebar_value"
+        android:layout_height="@dimen/home_circlebar_value"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_below="@+id/title_home"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/measure_result_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/measure_result_state"
+            android:textSize="@dimen/measure_result_state_text_size" />
+
+        <View
+            android:layout_width="@dimen/home_view_width"
+            android:layout_height="@dimen/home_view_height"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/linear" />
+
+        <TextView
+            android:id="@+id/up_systolic_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/measure_result_state"
+            android:layout_marginStart="@dimen/home_up_systolic_result"
+            android:textSize="@dimen/normal_text_view_size" />
+
+        <TextView
+            android:id="@+id/unit_bp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/up_systolic_result"
+            android:text="@string/unit_bp"
+            android:textColor="@color/grey_text"
+            android:textSize="@dimen/mmhg_more_small"
+            android:layout_marginLeft="70dp"/>
+
+        <ImageView
+            android:id="@+id/contrast_image"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/up_systolic_result"
+            android:src="@drawable/select_up_or_down"
+            android:layout_marginLeft="110dp" />
+
+        <TextView
+            android:id="@+id/contrast_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/up_systolic_result"
+            android:layout_toRightOf="@+id/contrast_image"
+            android:layout_marginLeft="3dp"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tb_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_home"
+        android:orientation="vertical">
+
+        <com.dinuscxj.progressbar.CircleProgressBar
+            android:id="@+id/circle_progressbar"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            app:progress_background_color="@color/colorBackground"
+            app:progress_start_color="@color/blue_text"
+            app:progress_end_color="@color/blue_text"
+            app:progress_stroke_width="@dimen/margin_small"
+            app:progress_text_color="@color/white"
+            app:style="solid_line">
+
+        </com.dinuscxj.progressbar.CircleProgressBar>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/result_measure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb_home"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_systolic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/mid_grey_text"
+                android:text="@string/text_systolic" />
+
+            <TextView
+                android:id="@+id/systolic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_systolic"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/normal_text"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/systolic"
+                android:text="@string/unit_bp"
+                android:textColor="@color/grey_text"
+                android:layout_alignBaseline="@+id/systolic"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="65dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_diastolic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/mid_grey_text"
+                android:text="@string/text_diastolic" />
+            <TextView
+                android:id="@+id/diastolic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_diastolic"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/normal_text"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unit_bp"
+                android:textColor="@color/grey_text"
+                android:layout_alignBaseline="@+id/diastolic"
+                android:layout_marginLeft="48dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_pulse_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/mid_grey_text"
+                android:text="@string/text_pulse_min" />
+
+            <TextView
+                android:id="@+id/pulse_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_pulse_min"
+                android:layout_marginLeft="22dp"
+                android:textColor="@color/normal_text"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unit_pulse_bp"
+                android:textColor="@color/grey_text"
+                android:layout_alignBaseline="@+id/pulse_min"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="46dp"
+                android:textSize="@dimen/normal_text_size"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/colorBackground"
+        android:layout_marginTop="@dimen/margin_more_small"
+        android:layout_below="@+id/result_measure"/>
+
+    <TextView
+        android:id="@+id/text_statistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/result_measure"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Statistics"
+        android:textSize="@dimen/main_times_text_size" />
+
+    <TextView
+        android:id="@+id/total_times_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/text_statistics"
+        android:layout_marginEnd="@dimen/total_times_text"
+        android:text="@string/totalTimes"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/main_times_text_size_small" />
+
+    <TextView
+        android:id="@+id/total_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/text_statistics"
+        android:layout_marginEnd="@dimen/total_times"
+        android:textColor="@color/mid_grey_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@+id/text_statistics"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_more_small">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_more_small"
+                android:layout_weight="1"
+                android:background="@drawable/circular_rectangle_home"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/home_layout_bg">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/main_times_text_lightimes"
+                        android:textColor="@color/blue_text"
+                        android:textSize="@dimen/main_times_text_size_small" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/count_times_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_extra_medium"
+                    android:textSize="@dimen/normal_text_view_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_more_small"
+                android:layout_weight="1"
+                android:background="@drawable/circular_rectangle_home"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/home_layout_bg">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/main_times_text_idealtimes"
+                        android:textColor="@color/blue_text"
+                        android:textSize="@dimen/main_times_text_size_small" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/count_times_ideal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_extra_medium"
+                    android:textSize="@dimen/normal_text_view_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_more_small">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_more_small"
+                android:layout_weight="1"
+                android:background="@drawable/circular_rectangle_home"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/home_layout_bg">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/main_times_text_normaltimes"
+                        android:textColor="@color/blue_text"
+                        android:textSize="@dimen/main_times_text_size_small" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/count_times_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_extra_medium"
+                    android:textSize="@dimen/normal_text_view_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_more_small"
+                android:layout_weight="1"
+                android:background="@drawable/circular_rectangle_home"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/home_layout_bg">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/main_times_text_moderatetimes"
+                        android:textColor="@color/blue_text"
+                        android:textSize="@dimen/main_times_text_size_small" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/count_times_moderate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_extra_medium"
+                    android:textSize="@dimen/normal_text_view_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/margin_extra_small"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_more_small">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/margin_more_small"
+                android:layout_weight="1"
+                android:background="@drawable/circular_rectangle_home"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/home_layout_bg">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="@string/main_times_text_edgetimes"
+                        android:textColor="@color/blue_text"
+                        android:textSize="@dimen/main_times_text_size_small" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/count_times_edge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_extra_medium"
+                    android:textSize="@dimen/normal_text_view_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_more_small"
+                android:layout_weight="1"
+                android:background="@drawable/circular_rectangle_home"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/home_layout_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/main_times_text_severetimes"
+                        android:textColor="@color/blue_text"
+                        android:textSize="@dimen/main_times_text_size_small" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/count_times_severe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_extra_medium"
+                    android:textSize="@dimen/normal_text_view_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

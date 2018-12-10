@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    style="@style/ActionBarButton"
+    android:padding="@dimen/margin_small"
+    android:background="@drawable/circular_data_list"
+    android:orientation="horizontal">
+        <View
+            android:id="@+id/item_data_daily_view"
+            android:layout_width="@dimen/margin_more_small"
+            android:layout_height="@dimen/data_daily_month"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/item_data_daily_view"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/date_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/mid_grey_text"/>
+
+            <TextView
+                android:id="@+id/date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_week"
+                android:textColor="@color/mid_grey_text"/>
+
+            <TextView
+                android:id="@+id/data_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/date_week"
+                android:layout_marginStart="40dp"
+                android:textColor="@color/mid_grey_text"/>
+        </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/item_data_sbp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:textSize="@dimen/main_times_text_size"/>
+
+    <TextView
+        android:id="@+id/b_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/normal_text_view_size"/>
+
+    <TextView
+        android:id="@+id/item_data_dbp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_times_text_size"
+        android:layout_gravity="center_vertical"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_bp"
+        android:layout_marginLeft="@dimen/mmhg_left"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/margin_medium"/>
+
+    <ImageView
+        android:id="@+id/image_data_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pulse_rate"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_medium"/>
+
+    <TextView
+        android:id="@+id/item_data_pulse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_times_text_size"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:text="bpm"
+        android:textColor="@color/grey_text"
+        android:layout_marginLeft="@dimen/margin_small"/>
+
+    <TextView
+        android:id="@+id/item_data_measure_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_gravity="center_vertical"/>
+
+
+</LinearLayout>

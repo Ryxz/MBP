@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<solid android:color="@color/blue_text"/>-->
+    <!-- 边框色 -->
+    <stroke android:width="0.5dip" android:color="@color/grey_text" />
+
+    <corners android:topLeftRadius="@dimen/margin_large"
+        android:bottomLeftRadius="@dimen/margin_large"/>
+</shape>

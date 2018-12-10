@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    defaultConfig {
+        applicationId "com.yuyue.renyx.mbp"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        setProperty("archivesBaseName", "MBP-$versionName")
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        myConfig{
+            storeFile file("key.jks")
+            storePassword "123321"
+            keyAlias "Key"
+            keyPassword "123321"
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'com/itextpdf/text/pdf/fonts/cmap_info.txt'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.myConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.1'
+    testImplementation 'junit:junit:4.12'
+
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+    implementation'com.android.support:support-v4:27.1.1'
+    implementation 'com.dinuscxj:circleprogressbar:1.2.0'
+    implementation 'de.greenrobot:eventbus:2.2.1'
+    implementation 'net.sourceforge.jexcelapi:jxl:2.6.12'
+    implementation 'com.itextpdf:itextpdf:5.5.4'
+    implementation 'com.itextpdf:itext-asian:5.2.0'
+    implementation 'com.google.zxing:core:3.1.0'
+    implementation 'com.alibaba:fastjson:1.2.4'
+    implementation(name:'btlib-1.2.0-release', ext:'aar')
+    implementation(name:'zxing-release-1.0.0', ext:'aar')
+    implementation "no.nordicsemi.android.support.v18:scanner:1.0.0"
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.2.0"
+    implementation "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
+    implementation "io.reactivex:rxjava:$rootProject.rxjavaVersion"
+    implementation "com.artemzin.rxjava:proguard-rules:$rootProject.rxjavaProguardVersion"
+    implementation 'org.xutils:xutils:3.3.38'
+    implementation "com.github.PhilJay:MPAndroidChart:v2.1.6"
+//    implementation "com.github.hotchemi:permissionsdispatcher:$rootProject.permissionsdispatcherVersion"
+//    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:$rootProject.permissionsdispatcherVersion"
+//    implementation 'com.github.pedrovgs:lynx:1.1.0'
+//    implementation 'com.github.shinelw.colorarcprogressbar:library:1.0.3'
+}

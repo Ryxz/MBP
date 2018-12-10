@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/title_measure"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/total_times_text"-->
+        <!--android:background="@color/main_theme_color">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/btn_back"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/margin_medium"-->
+            <!--android:src="@drawable/btn_back"-->
+            <!--android:background="@null"-->
+            <!--android:contentDescription="@null" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_save"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="@string/actionbar_measure"-->
+            <!--style="@style/ActionBarTitle"/>-->
+    <!--</RelativeLayout>-->
+
+
+    <ImageView
+        android:id="@+id/machine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/ic_device" />
+
+   <LinearLayout
+       android:id="@+id/measure_status"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:orientation="horizontal">
+
+       <RelativeLayout
+           android:id="@+id/discovering"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1">
+           <ImageView
+               android:id="@+id/device_state_0"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:background="@drawable/device_state_2"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:layout_below="@+id/device_state_0"
+               android:text="@string/discovering"/>
+       </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/connecting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/device_state_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/device_state_0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/device_state_1"
+                android:text="@string/connecting"/>
+        </RelativeLayout>
+
+       <RelativeLayout
+           android:id="@+id/measureing"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1">
+           <ImageView
+               android:id="@+id/device_state_2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:background="@drawable/device_state_0" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:layout_below="@+id/device_state_2"
+               android:text="@string/measuring"/>
+       </RelativeLayout>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/measure_status"
+        android:layout_marginTop="@dimen/margin_large"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:text="@string/status"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textSize="16sp"
+            android:textColor="@color/blue_text"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

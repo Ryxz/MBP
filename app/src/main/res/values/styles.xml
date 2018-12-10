@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ActionBarTitle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/action_bar_title_text_size</item>
+    </style>
+
+    <style name="ActionBarButton">
+        <item name="android:minWidth">50dp</item>
+        <item name="android:radius">@dimen/normal_button_corner_radius</item>
+        <!--<item name="android:paddingLeft">@dimen/margin_small</item>-->
+        <!--<item name="android:paddingRight">@dimen/margin_small</item>-->
+        <item name="android:padding">1dp</item>
+        <item name="android:background">@drawable/circular_rectangle_statistics</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TableHeader">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">@dimen/margin_medium</item>
+        <item name="android:paddingBottom">@dimen/margin_medium</item>
+        <item name="android:textColor">@color/mid_grey_text</item>
+    </style>
+
+</resources>

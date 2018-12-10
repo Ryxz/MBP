@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/tb_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bed_no_list_width"
+        android:background="@color/main_theme_color">
+        <LinearLayout
+            style="@style/ActionBarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+            <Button
+                style="@style/ActionBarButton"
+                    android:id="@+id/tv_main_menu_daily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="@string/actionbar_data_daily"
+                    android:background="@drawable/data_daily_select"
+                    android:textColor="@drawable/btn_data_color"
+                    android:textSize="@dimen/normal_text_size" />
+
+            <Button
+                style="@style/ActionBarButton"
+                    android:id="@+id/tv_main_menu_curve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="@string/actionbar_data_curve"
+                    android:background="@drawable/data_daily_select"
+                    android:textColor="@drawable/btn_data_color"
+                    android:textSize="@dimen/normal_text_size" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/btn_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@color/white"
+            android:text="@string/export"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/tb_data_fm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb_title">
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">MBP</string>
+    <string name="hint_user_name">用户名</string>
+    <string name="hint_password">密码</string>
+    <string name="btn_login">登录</string>
+    <string name="tip">提示</string>
+
+    <string name="tab_menu_home">Home</string>
+    <string name="tab_menu_measure">Measure</string>
+    <string name="tab_menu_data">Data</string>
+
+    <string name="fragment_text_home">Home</string>
+    <string name="fragment_text_measure">Measure</string>
+    <string name="fragment_text_data">Data</string>
+
+    <string name="actionbar_main_menu">BooldPressure</string>
+    <string name="actionbar_measure">Measuring</string>
+    <string name="actionbar_manualadd">Manual Add</string>
+    <string name="actionbar_data_daily">Daily</string>
+    <string name="actionbar_data_curve">Curve</string>
+    <string name="actionbar_data_export">EXPORT</string>
+
+    <string name="tip_start_to_export">开始导出</string>
+    <string name="tip_export_success">导出成功</string>
+    <string name="tip_empty_list">数据列表为空</string>
+    <string name="tip_app_not_found">未能启动对应APP，可至%s目录查看文件</string>
+    <string name="tip_no_list">为空</string>
+    <string name="please_deleted_cache_dir">权限出错，无法读取存储空间，需要用户手动删除SD卡下的
+        /Android/data/com.yuyue.mbp 目录
+    </string>
+    <string name="something_wrong">出错!</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="totalTimes">Total times:</string>
+
+
+
+    <string name="ideal">Ideal</string>
+
+    <string name="main_times_text_lightimes">Light Times</string>
+    <string name="main_times_text_normaltimes">Normal Times</string>
+    <string name="main_times_text_edgetimes">Edge Times</string>
+    <string name="main_times_text_idealtimes">Ideal Times</string>
+    <string name="main_times_text_moderatetimes">Moderate Times</string>
+    <string name="main_times_text_severetimes">Severe Times</string>
+
+    <string name="text_systolic">Systolic</string>
+    <string name="text_diastolic">Diastolic</string>
+    <string name="text_pulse_min">Pulse/min</string>
+    <string name="text_date_time">Date and Time</string>
+    <string name="unit_bp">mmHg</string>
+    <string name="unit_pulse_bp">bpm</string>
+
+    <string name="discovering">Discovering</string>
+    <string name="connecting">Connecting</string>
+    <string name="measuring">Measuring</string>
+
+    <string name="status">Status:</string>
+    <string name="sync">同步</string>
+    <string name="sync_data">同步数据</string>
+    <string name="syncing">数据同步中，请稍后&#8230;</string>
+    <string name="sync_successed">数据同步成功</string>
+    <string name="sync_failed">数据同步失败，%s</string>
+    <string name="loading">正在查询，请稍候...</string>
+    <string name="dialog_title_manage_back">测量数据尚未保存，确定要返回吗？</string>
+    <string name="dialog_message_manage_back">点击确定保存并返回；点击取消直接返回</string>
+    <string name="tip_data_saved">数据保存成功</string>
+
+    <string name="tip_sbp_null">请输入收缩压</string>
+    <string name="tip_dbp_null">请输入舒张压</string>
+    <string name="tip_pulse_rate_null">请输入脉搏</string>
+
+    <string name="export">EXPORT</string>
+    
+    <string name="ble_state_0">Discovering</string>
+    <string name="ble_state_1">Connecting</string>
+    <string name="ble_state_2">Measuring</string>
+
+    <item name="tag_top" type="id"></item>
+    <item name="tag_bottom" type="id"></item>
+    
+
+</resources>
