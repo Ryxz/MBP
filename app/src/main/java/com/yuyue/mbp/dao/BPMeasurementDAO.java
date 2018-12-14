@@ -7,7 +7,9 @@ import com.lidroid.xutils.DbUtils;
 import com.lidroid.xutils.db.sqlite.Selector;
 import com.lidroid.xutils.exception.DbException;
 import com.yuyue.mbp.entity.BPMeasurement;
+import com.yuyue.mbp.global.utils.CommonUtil;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -129,30 +131,33 @@ public class BPMeasurementDAO  extends BaseDAO<BPMeasurement> {
         return flag;
     }
 
-//    private void deleteMeasurement() {
-////        StringBuilder sql = new StringBuilder("DELETE FROM tb_measurement");
-////            if (getById(BPMeasurement.ID) != null) {
-//                try {
-//                    db.delete();
-//                } catch (DbException e) {
-//                    e.printStackTrace();
-//                }
-////            }
-//    }
 
 //    private void createMeasurement() {
 //            BPMeasurement measurement = new BPMeasurement();
-//            measurement.setSbp(166);
-//            measurement.setDbp(80);
-//            measurement.setMeasureTime(new Date());
-//            measurement.setPulseRate(66);
-//            measurement.setLevel(CommonUtil.getPressureLevel(measurement.getSbp(),measurement.getDbp()));
-//            try {
-//                db.save(measurement);
-//            } catch (DbException e) {
-//                Log.d(TAG, e.getMessage());
-//                e.printStackTrace();
+//            int sbp = 200;
+//            int dbp = 99;
+//            int rate = 80;
+//            for (int j = 0;j<5;j++) {
+//                sbp=sbp+-5;
+//                dbp = dbp-4;
+//                rate = rate -3;
+//                for (int i=0;i<20;i++) {
+//
+//                }
 //            }
+//        measurement.setSbp(118);
+//        measurement.setDbp(66);
+//        measurement.setMeasureTime(new Date());
+//        measurement.setPulseRate(60);
+//        measurement.setLevel(CommonUtil.getPressureLevel(measurement.getSbp(),measurement.getDbp()));
+//        try {
+//            db.save(measurement);
+//        } catch (DbException e) {
+//            Log.d(TAG, e.getMessage());
+//            e.printStackTrace();
+//        }
+
+
 //    }
 
 }
